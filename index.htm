@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-
-<!-- Kylan Green Date
- Dev: 8-25-26
- Date Tested: 8-25-26
- Southern Illinois University
- Comment Header  for my website  -->  
-
+<!--
+    Kylan Green Personal Portfolio
+    Date Developed: 09-24-26
+    Date Tested: 09-24-26
+    Southern Illinois University
+-->
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Personal Portfolio</title> 
-        
-        <!-- Google tag (gtag.js) -->
-       
-        <meta name="description" content="Kylan Green personal portfolio and resume"> <meta name="keywords" content="Kylan Green, personal portfolio, resume">
-    </head>
-    <body>   
-        <header>
-            <img src="images/Kapsi.webp" alt="PP Logo" width=500">         <!-- Bicycle shop graphic -->
-         
-        </header> 
-        <nav id="mobile_menu"></nav>
-        <nav id="nav_menu">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Kylan Green personal portfolio">
+    <meta name="keywords" content="Kylan Green, portfolio, education, interests, work experience">
+    <title>Kylan Green | Personal Portfolio</title>
+    <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/slicknav.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script>
+            $(function () {
+                $('#nav_menu').slicknav({
+                    prependTo: '#mobile_menu',
+                    label: 'MENU',
+                    closeOnClick: true
+                });
+            });
+        </script>
+</head>
+<body>
+    <header class="site-header">
+        <img class="portfolio-image" src="images/Kapsi.webp" alt="Kappa Alpha Psi graphic">
+    </header>
+    <nav id="mobile_menu"></nav>
+        <nav id="nav_menu" aria-label="Main navigation">
             <ul>
-             <!-- Service and elements of expertise -->
                 <li><a href="index.htm" class="current">Home</a></li>
                 <li><a href="education.htm">Education</a></li>
                 <li><a href="interests.htm">Interests</a></li>
                 <li><a href="occupation.htm">Occupation</a></li>
-                <li><a href="contact.htm" class="lastitem">Contact</a></li>
-            </ul> 
+                <li><a href="contact.htm">Contact</a></li>
+            </ul>
         </nav>
-        <h1> Kylan Green's Bicycle Shop </h1>s</h1>
-     <!-- Main heading -->
-     
-        <h2> The family oriented bike shop </h2>
-     <!-- Bicycle Shop Introduction -->
-     
-        <p>Come on down to our shop and find youself the perfect bicycyle for you. We offer <strong>quality bicycles</strong> for riders of all age. </p>
-     <blockquote> "A great place to find a bicycle for the whole family."</blockquote>
-     <!-- Customer quote -->
-
-     <blockquote>"Friendly Service and quality make every ride better."
-      <!-- Customer quote -->
-
-      <blockquote>"Friendly service and quality bicycles make every ride better."</blockquote>
-      <!-- Customer quote -->
-      
-        <blockquote>Work Experience, Education, Research Interests</blockquote>
-        <ol>
-            <li>Programming</li>
-            <li>Database</li>
-            <li>AI and ML</li>
-        </ol>
-        <a href="https://www.siu.edu">WWW.SIU.EDU</a>
-        <p>How to contact Kylan Green &amp; Staff:</p> <address>1-800-aaa-xxxx<br>
-        <a href="emailto:owner@pp.com">owner@kylangreen2.gitub.com</a> </address>
-        <pre>
-My Address:
-<!-- Business Address -->
-
-Kylan Green
-1263 Lincoln drive
-Carbondale, IL
-62901
-        </pre>
-    </body>
-
+    <!-- Portfolio navigation -->
+<!-- Main page content -->
+<!-- Supporting information -->
+<!-- Lab 2 and Lab 3 requirements -->
+    <main class="page-content">
+        <h1>Kylan Green's Personal Portfolio</h1>
+        <h2>Welcome to My Portfolio</h2>
+        <p>This website introduces my education, interests, work experience, and professional goals. I am interested in information technology, cybersecurity, programming, databases, and emerging technology.</p>
+        <blockquote>“Friendly service and quality make every ride better.”</blockquote>
+        <section class="card">
+            <h2>Research and Technology Interests</h2>
+            <p>My academic interests include technologies that can solve real-world problems and improve how people and organizations work.</p>
+            <ol>
+                <li>Programming</li>
+                <li>Databases</li>
+                <li>Artificial Intelligence and Machine Learning</li>
+            </ol>
+        </section>
+        <section class="card">
+            <h2>Portfolio Overview</h2>
+            <p>Use the navigation menu to learn more about my education, interests, work experience, and ways to contact me.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kylan Green | Southern Illinois University</p>
+    </footer>
+</body>
 </html>
