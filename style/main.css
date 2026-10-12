@@ -116,17 +116,33 @@ blockquote {
     background: #eaf2fb;
 }
 
-/* Lab 2 two-column layout without CSS Grid */
+
+/* Interests page: two columns on desktop */
 .two-column {
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     gap: 20px;
 }
 
 .column {
-    flex: 1 1 0;
+    flex: 1 1 50%;
     min-width: 0;
 }
+
+/* Stack the columns on mobile */
+@media screen and (max-width: 700px) {
+    .two-column {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .column {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
 
 footer {
     margin-top: 20px;
