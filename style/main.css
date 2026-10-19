@@ -180,3 +180,101 @@ footer {
     .card { padding: 8px; }
     footer { font-size: .8rem; }
 }
+
+/* Responsive table container */
+.table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 15px 0;
+    border-radius: 6px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Main portfolio table */
+.portfolio-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    border: 1px solid #153e75;
+    background-color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Table caption */
+.portfolio-table caption {
+    caption-side: top;
+    padding: 12px 8px;
+    color: #153e75;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Table header */
+.portfolio-table thead {
+    background-color: #153e75;
+    color: #ffffff;
+}
+
+.portfolio-table th {
+    padding: 12px 10px;
+    border: 1px solid #153e75;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Table cells */
+.portfolio-table td {
+    padding: 10px;
+    border: 1px solid #9aafc5;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: break-word;
+}
+
+/* Alternating row colors */
+.portfolio-table tbody tr:nth-child(even) {
+    background-color: #edf3fa;
+}
+
+/* Highlight a row when the pointer moves over it */
+.portfolio-table tbody tr:hover {
+    background-color: #dce9f8;
+}
+
+/* Table footer */
+.portfolio-table tfoot {
+    background-color: #e2ebf5;
+    color: #153e75;
+    font-weight: bold;
+}
+
+.portfolio-table tfoot td {
+    border: 1px solid #153e75;
+    padding: 12px;
+}
+
+/* Lab 5 responsive table: screens 470px and below */
+@media screen and (max-width: 470px) {
+    .table-responsive {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .portfolio-table {
+        min-width: 760px;
+        font-size: 0.85rem;
+    }
+
+    .portfolio-table caption {
+        font-size: 1rem;
+    }
+
+    .portfolio-table th,
+    .portfolio-table td {
+        padding: 8px;
+    }
+}
