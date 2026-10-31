@@ -1,1 +1,103 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylan Green | Form Response</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav_menu").slicknav({
+                prependTo: "#mobile_menu",
+                label: ""
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="images/Kapsi.webp"
+             alt="Kappa Alpha Psi logo"
+             class="portfolio-image">
+    </header>
+
+    <nav id="mobile_menu"></nav>
+
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="education.htm">Education</a></li>
+            <li><a href="interests.htm">Interests</a></li>
+            <li><a href="occupation.htm">Occupation</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-content">
+        <section class="card">
+            <h1>Form Submission Received</h1>
+            <p>Thank you for submitting the contact form.</p>
+            <p>Your form information is shown below, except for your password.</p>
+
+            <dl class="response-details">
+                <dt>Email</dt>
+                <dd id="response-email"></dd>
+
+                <dt>Full Name</dt>
+                <dd id="response-fullname"></dd>
+
+                <dt>Address</dt>
+                <dd id="response-address"></dd>
+
+                <dt>City</dt>
+                <dd id="response-city"></dd>
+
+                <dt>State</dt>
+                <dd id="response-state"></dd>
+
+                <dt>ZIP Code</dt>
+                <dd id="response-zip"></dd>
+
+                <dt>Phone Number</dt>
+                <dd id="response-phone"></dd>
+
+                <dt>Creation Date</dt>
+                <dd id="response-creationdate"></dd>
+
+                <dt>Message</dt>
+                <dd id="response-message"></dd>
+
+                <dt>Type of Inquiry</dt>
+                <dd id="response-inquiry"></dd>
+            </dl>
+
+            <p><a href="contact.htm">Return to the contact form</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Kylan Green | Southern Illinois University</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const fields = [
+            "email", "fullname", "address", "city", "state",
+            "zip", "phone", "creationdate", "message", "inquiry"
+        ];
+
+        fields.forEach(function (field) {
+            const output = document.getElementById("response-" + field);
+            const value = params.get(field);
+            output.textContent = value ? value : "Not provided";
+        });
+    </script>
+</body>
+</html>
