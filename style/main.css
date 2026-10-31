@@ -278,3 +278,130 @@ footer {
         padding: 8px;
     }
 }
+
+
+/* Lab 6: Contact form styling */
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+    min-width: 0;
+}
+
+.form-field label,
+.form-field legend {
+    font-weight: bold;
+    color: #153e75;
+}
+
+.form-field input:not([type="radio"]),
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #9aafc5;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1f2933;
+    font: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: 2px solid #0057b8;
+    outline-offset: 2px;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field small {
+    color: #555555;
+    font-size: 0.85rem;
+}
+
+fieldset.form-field {
+    border: 1px solid #c9d5e2;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.radio-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal !important;
+    color: #1f2933 !important;
+    margin: 4px 0;
+}
+
+.radio-option input {
+    margin: 0;
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #153e75;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.form-buttons button:hover,
+.form-buttons button:focus {
+    background: #0b2d52;
+}
+
+.form-buttons .reset-button {
+    background: #596575;
+}
+
+.form-buttons .reset-button:hover,
+.form-buttons .reset-button:focus {
+    background: #3f4854;
+}
+
+.response-details dt {
+    margin-top: 14px;
+    font-weight: bold;
+    color: #153e75;
+}
+
+.response-details dd {
+    margin-left: 0;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 550px) {
+    .contact-form {
+        margin: 10px auto;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+}
